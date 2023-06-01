@@ -20,27 +20,33 @@
                 
                 <div class="form-wrapper">
                     <input type="text" id="name"  placeholder="* Name" class="form-control">
+                    <span id="errorName"></span>
                 </div>
 
                 <div class="form-wrapper">
                     <input type="text" id="email"  placeholder="* Email Adress" class="form-control">
+                    <span id="errorEmail"></span>
                 </div>
                 <div class="form-wrapper">
                     <input type="text" id="country" placeholder="* Country" class="form-control">
+                    <span id="errorCountry"></span>
                 </div>
                 <div class="form-wrapper">
-                    <input type="number" id="phone"  title="Please enter valid phone number" size="10" placeholder="* Phone" class="form-control">
+                    <input type="number" id="phone" onKeyPress="if(this.value.length==10) return false;"  placeholder="* Phone" class="form-control">
+                    <span id="errorPhone"></span>
                 </div>
                 
                 <div class="form-ps-control">
                     <input type="password" id="password" placeholder="* Password" >
                     <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    
                 </div>
-                
+                <span id="errorPassword"></span>
                 <br>
                 <div >
                     <input type="checkbox" name="agree" id="agree" value="yes" />
-                    <label for="agree">I agree to the terms and conditions</label>
+                    <label for="agree">I agree to the terms and conditions</label><br>
+                    <span id="errorCheckbox"></span>
                 </div>
                 <button type="submit" id="btn" >Create Account</button>
                 <p style="text-align:center;">Already have an account? <span>Sign In</span></p>

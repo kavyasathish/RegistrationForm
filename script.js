@@ -15,44 +15,59 @@ function formValidate(person, chk_box_val){
     var regName = /\d+$/g;
     var checkbox = document.getElementById('agree');
 
-    if(name == ""){
-        alert("Please enter your name" + person.name);
+    if(name === ""){
+        var errorName = document.getElementById('errorName');
+        errorName.innerHTML = "<span style='color: red;'> Please Enter Your Name * </span>";
         document.getElementById('name').focus();
         return false;
+    }else {
+        document.getElementById('errorName').innerHTML="";
+
     }
     if(email == "" || !regEmail.test(email)){
-        alert("Please enter a valid e-mail address");
+        document.getElementById('errorEmail').innerHTML="<span style='color: red;'>Please enter valid Email * </span>";
         document.getElementById('email').focus();
         return false;
-    } 
+    } else{
+        document.getElementById('errorEmail').innerHTML="";
+    }
     if(country == ""){
-        alert("Please enter the country name");
+        document.getElementById('errorCountry').innerHTML="<span style='color: red;'> Please enter country name * </span>";
         document.getElementById('country').focus();
         return false;
+    } else{
+        document.getElementById('errorCountry').innerHTML="";
     }
     if(phone == "" || !regPhone.test(phone)){
-        alert("Please enter valid phone number.");
+        document.getElementById('errorPhone').innerHTML="<span style='color: red;'> Please enter valid phone number * </span>";
         document.getElementById('phone').focus();
         return false;
+    } else{
+        document.getElementById('errorPhone').innerHTML="";
     }
     if(password == "" ){
-        alert("Please enter your password.");
+        document.getElementById('errorPassword').innerHTML="<span style='color: red;'> Please enter Password * </span>";
         document.getElementById('password').focus();
         return false;
-
+    } else{
+        document.getElementById('errorPassword').innerHTML="";
     }
     if(password.length < 6 ){
-        alert("Password length shoud be at least 6 character long");
+        document.getElementById('errorPassword').innerHTML=" <span style='color: red;'> Password length shoud be at least 6 character long </span>" ;
         document.getElementById('password').focus();
-        return false;
+        return false; 
+    }else{
+        document.getElementById('errorPassword').innerHTML="";
     }
     if(checked.checked==false){
-        alert("Please check the terms and conditions");
+        document.getElementById('errorCheckbox').innerHTML="<span style='color: red;'> Please check terms and conditions </span>";
+        document.getElementById('password').focus();
         document.getElementById('agree').focus();
         return false;
+    }else{
+        document.getElementById('errorCheckbox').innerHTML="";
     }
-    return true;
     
-
+return true;
     
 }

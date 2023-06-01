@@ -85,14 +85,14 @@ input::placeholder {
 
 button{
     border: none;
-    width: 364px;
-    height: 80px;
+    width: 350px;
+    height: 50px;
     margin:auto;
     margin-top: 40px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    left: 30%;
+    text-align: center;
     padding-left: 0;
     background: rgb(39, 39, 116);
     font-size: 30px;
@@ -102,6 +102,9 @@ button{
 }
 p{
     color: white;
+    position: relative;
+    left: 30%;
+    text-align: center;
 }
 p span{
     color: rgb(29, 25, 25);
