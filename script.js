@@ -8,7 +8,7 @@ function formValidate(person, chk_box_val){
     var password = person.password;
     var checked = chk_box_val;
 
-   c//onsole.log(person, checked.checked)
+   //console.log(person, checked.checked)
 
     var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
     var regPhone = /^\d{10}$/;
